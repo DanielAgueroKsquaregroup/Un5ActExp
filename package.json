@@ -1,0 +1,33 @@
+{
+  "name": "un5actexp",
+  "version": "1.0.0",
+  "description": "Restful Activity5BookAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\"Error no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielAgueroKsquaregroup/Un5ActExp.git"
+  },
+  "keywords": [
+    "Restful",
+    "API",
+    "Unit5",
+    "Express",
+    "JSPath"
+  ],
+  "author": "daniel aguero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielAgueroKsquaregroup/Un5ActExp/issues"
+  },
+  "homepage": "https://github.com/DanielAgueroKsquaregroup/Un5ActExp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

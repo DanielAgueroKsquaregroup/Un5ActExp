@@ -1,16 +1,19 @@
 const express = require('express');
-const {writeFile} = require('fs');
-const routes = require('./routes/router');
-
 const app = express();
 const port = 5000;
-const domain = '/books';
+
+// Router
+const routes = require('./api/routes/apiRoutes');
 
 // Parsing the body
 app.use(express.json());
 
 // Defining routes
 app.use(routes);
+app.get('/', (rep, res) => {
+    res.send('Server ready');
+});
+
 app.use((req, res) => {
     res.status(404).json({
         message: `Ups, resource not found!`
@@ -19,5 +22,5 @@ app.use((req, res) => {
 
 // Starting the server
 app.listen(port, () => {
-    console.log(`Server listening at port: ${port}`);
+    console.log(`Server listening at url: http://localhost:${port}`);
 });

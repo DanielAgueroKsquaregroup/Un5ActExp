@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const uuid = require('uuid');
+let books = [];
 
 // Path to database (.txt file)
 const filePath = path.join(path.dirname(require.main.filename), 'database', 'books.text');
@@ -25,7 +26,7 @@ module.exports = class Book {
     save(){
         // The file must be read every time it's modified
         fs.readFile(filePath, (err, data) => {
-            let books = [];
+            // let books = [];
             if(!err){
                 books = JSON.parse(data);
             }

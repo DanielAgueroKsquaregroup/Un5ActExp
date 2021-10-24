@@ -50,8 +50,8 @@ const updateBook = (req, res) => {
         const book = books.find( elm => elm.guid === guid);
 
         if (book) {
-            Object.assign(book, body);
-            Book.update(book);
+            Object.assign(book, body); // Assigning updated book to the array
+            Book.update(books); // Updating array that contain all books, in order to show it
             res.send({
                 message: `successfully updated!!`
             });
